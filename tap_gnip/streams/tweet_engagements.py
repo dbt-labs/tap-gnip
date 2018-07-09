@@ -128,12 +128,13 @@ class TweetEngagementsStream(ChildStream):
 
             save_state(self.state)
 
-            if self.request_start is not None:
-                sleep_seconds = (
-                    (self.request_start + datetime.timedelta(seconds=35)) -
-                    datetime.datetime.utcnow()).seconds
+            max_sleep = 35
+            sleep_seconds = max(
+                max_sleep,
+                ((self.request_start + datetime.timedelta(seconds=max_sleep)) -
+                 datetime.datetime.utcnow()).seconds)
 
-                if sleep_seconds > 0:
-                    LOGGER.info("Sleeping for {} seconds before making "
-                                "next request".format(sleep_seconds))
-                    time.sleep(sleep_seconds)
+            if sleep_seconds > 0:
+                LOGGER.info("Sleeping for {} seconds before making "
+                            "next request".format(sleep_seconds))
+                time.sleep(sleep_seconds)
