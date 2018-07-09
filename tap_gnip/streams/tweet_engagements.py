@@ -129,7 +129,7 @@ class TweetEngagementsStream(ChildStream):
             save_state(self.state)
 
             max_sleep = 35
-            sleep_seconds = max(
+            sleep_seconds = min(
                 max_sleep,
                 ((self.request_start + datetime.timedelta(seconds=max_sleep)) -
                  datetime.datetime.utcnow()).seconds)
