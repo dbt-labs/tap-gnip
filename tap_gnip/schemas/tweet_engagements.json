@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "inclusion": "available",
+  "selected-by-default": false,
+  "selected": true,
+  "properties": {
+    "tweet_id": {
+      "type": ["null", "integer"]
+    },
+    "engagement_type": {
+      "type": ["null", "string"]
+    },
+    "day": {
+      "type": ["null", "string"]
+    },
+    "hour": {
+      "type": ["null", "integer"]
+    },
+    "date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "value": {
+      "type": ["null", "integer"]
+    }
+  }
+}
