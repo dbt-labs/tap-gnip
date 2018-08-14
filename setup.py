@@ -15,9 +15,7 @@ setup(name='tap-gnip',
           'requests==2.18.4',
           'requests-oauthlib==0.8.0',
           'funcy==1.10.1',
-      ],
-      dependency_links=[
-          '-e ../tap-framework',
+          'tap-framework==0.0.1',
       ],
       entry_points='''
           [console_scripts]
