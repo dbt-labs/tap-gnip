@@ -56,8 +56,20 @@ class TweetEngagementsStream(ChildStream):
             "engagement_types": [
                 "impressions",
                 "engagements",
+                "favorites",
+                "replies",
+                "retweets",
                 "url_clicks",
-                "detail_expands"
+                "hashtag_clicks",
+                "detail_expands",
+                "permalink_clicks",
+                "media_clicks",
+                "app_install_attempts",
+                "app_opens",
+                "email_tweet",
+                "user_follows",
+                "user_profile_clicks",
+                "video_views"
             ],
             "groupings": {
                 "hourly_stats": {
